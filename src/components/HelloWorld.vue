@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <button @click="run">XHTTPRequest</button>
+    <button @click="xHTTPRequest">XHTTPRequest</button>
     <button @click="axios">Axios</button>
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
     };
   },
   methods: {
-    Axios: function() {
+    axios: function() {
       const url="https://ussouthcentral.services.azureml.net/workspaces/8a9e6c2473674cbda1a9047e2e1258e2/services/0729753e4be646f3b0e1e0079df19ee8/execute?api-version=2.0&details=true"
       const auth="Bearer taYapadAQL5Ho5uaHZQI0xugDVHJTl0C3/5XahbZKPiUGYYptmfwAMQB8pGqJuIP+RwZcnR/7n30QDBJ54Vk+Q==";
       const data = { "Inputs": { "input1": {
@@ -49,7 +49,7 @@ export default {
         });
       
     },
-    XHTTPRequest: function() {
+    xHTTPRequest: function() {
       const url="https://ussouthcentral.services.azureml.net/workspaces/8a9e6c2473674cbda1a9047e2e1258e2/services/0729753e4be646f3b0e1e0079df19ee8/execute?api-version=2.0&details=true";
       const auth="Bearer taYapadAQL5Ho5uaHZQI0xugDVHJTl0C3/5XahbZKPiUGYYptmfwAMQB8pGqJuIP+RwZcnR/7n30QDBJ54Vk+Q==";
       const data = { "Inputs": { "input1": {

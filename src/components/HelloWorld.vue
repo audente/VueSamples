@@ -21,7 +21,7 @@ export default {
         "ColumnNames": ["Indice", "Nivel", "G_conta", "NumCta", "Desc", "CodAgrup", "DescAgrup"],
         "Values": [
           ["1", "1", "Capital", "101", "Banco", "value1", "value2" ],
-          ["2", "2", "Capital", "102", "Caja", "value1", "value2" ],
+          ["2", "2", "Capital", "102", "Caja", "", "value2" ],
           ["3", "2", "Capital", "102", "Caja", "value1", "value2" ],
         ]
         }},
@@ -34,10 +34,10 @@ export default {
       
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
-           if (this.readyState == 4 && this.status == 200) {
-               alert(this.responseText);
+           if (xhttp.readyState == 4 && xhttp.status == 200) {
+               alert("OK" + this.responseText);
            } else {
-             alert("FAILED:" + this.readyState + " - " + this.status + " >> " + this.responseText);
+             alert("Change:" + xhttp.readyState + " - " + xhttp.status + " >> " + xhttp.responseText);
            }
       };
       xhttp.open("POST", url, true);

@@ -43,7 +43,7 @@ export default {
       xhttp.setRequestHeader("Host", "ussouthcentral.services.azureml.net");
       xhttp.send(json);
       
-      alert(("sent");
+      alert("sent");
 
     }
   },

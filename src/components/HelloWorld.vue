@@ -47,7 +47,7 @@ export default {
       xhttp.setRequestHeader("Content-type", "application/json");
       xhttp.setRequestHeader("Authorization", auth);
       xhttp.setRequestHeader("Host", "ussouthcentral.services.azureml.net");
-      xhttp.send(json);
+      xhttp.send(data);
       
       alert("sent");
 

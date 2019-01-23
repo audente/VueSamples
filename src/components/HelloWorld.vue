@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <button @click="run">Run</button>
   </div>
 </template>
 
@@ -11,7 +12,12 @@ export default {
     return {
       msg: "Welcome to Your Vue.js App"
     };
-  }
+  },
+  methods: {
+    run: function() {
+      alert("ok");
+    }
+  },
 };
 </script>
 

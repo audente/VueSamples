@@ -44,7 +44,7 @@ export default {
       };
       xhttp.onerror = function() {
         alert("OnError:" + xhttp.readyState + " - " + xhttp.status + " [" + xhttp.responseText + "]");
-        alert("Error: " + xhttp.error.target + ":" + error.detail)
+        alert("Error: " + xhttp.error)
       };
 
       xhttp.open("POST", url, true);

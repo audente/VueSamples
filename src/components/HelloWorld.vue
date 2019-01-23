@@ -15,16 +15,19 @@ export default {
   },
   methods: {
     run: function() {
-      const url="https://ussouthcentral.services.azureml.net/workspaces/8a9e6c2473674cbda1a9047e2e1258e2/services/28c646b4a5a449cfae71eae39c1f7302/execute?api-version=2.0&details=true";
-      const auth="Bearer WBRsuaQ36vLeSR2iWDlLCB1gmPAO64N0G9vMJinQ2MWJfefqnAGFaxjWxxuL5JyqasL3VzpBHmp9QJLj3uX2Kw==";
-      const data = {"Inputs": {"input1": {
-        "ColumnNames": ["Indice", "NumCta", "Desc", "CodAgrup", "DescAgrup"],
+      const url="https://ussouthcentral.services.azureml.net/workspaces/8a9e6c2473674cbda1a9047e2e1258e2/services/0729753e4be646f3b0e1e0079df19ee8/execute?api-version=2.0&details=true";
+      const auth="Bearer taYapadAQL5Ho5uaHZQI0xugDVHJTl0C3/5XahbZKPiUGYYptmfwAMQB8pGqJuIP+RwZcnR/7n30QDBJ54Vk+Q==";
+      const data = { "Inputs": { "input1": {
+        "ColumnNames": ["Indice", "Nivel", "G_conta", "NumCta", "Desc", "CodAgrup", "DescAgrup"],
         "Values": [
-            ["1", "101", "Caja", "value1", "value2" ],
-            ["2", "201", "Capital", "value3", "value4" ]
-        ] } },
+          ["1", "1", "Capital", "101", "Banco", "value1", "value2" ],
+          ["2", "2", "Capital", "102", "Caja", "value1", "value2" ],
+          ["3", "2", "Capital", "102", "Caja", "value1", "value2" ],
+        ]
+        }},
         "GlobalParameters": {}
       }
+
       const json = JSON.stringify(data);
       
       alert("prepare");

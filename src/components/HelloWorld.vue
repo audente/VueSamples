@@ -34,7 +34,7 @@ export default {
            if (this.readyState == 4 && this.status == 200) {
                alert(this.responseText);
            } else {
-             alert("FAILED:" + this.readyState + " - " this.status + " >> " + this.responseText);
+             alert("FAILED:" + this.readyState + " - " + this.status + " >> " + this.responseText);
            }
       };
       xhttp.open("POST", url, true);

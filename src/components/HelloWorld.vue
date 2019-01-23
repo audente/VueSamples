@@ -34,12 +34,15 @@ export default {
       
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
-           if (xhttp.readyState == 4 && xhttp.status == 200) {
-               alert("OK" + this.responseText);
-           } else {
-             alert("Change:" + xhttp.readyState + " - " + xhttp.status + " >> " + xhttp.responseText);
-           }
+        alert("Change:" + xhttp.readyState + " - " + xhttp.status + " [" + xhttp.responseText + "]");
       };
+      xhttp.onprogress = function() {
+        alert("Progress:" + xhttp.readyState + " - " + xhttp.status + " [" + xhttp.responseText + "]");
+      };
+      xhttp.onload = function() {
+        alert("Load:" + xhttp.readyState + " - " + xhttp.status + " [" + xhttp.responseText + "]");
+      };
+
       xhttp.open("POST", url, true);
       xhttp.setRequestHeader("Content-type", "application/json");
       xhttp.setRequestHeader("Authorization", auth);

@@ -42,6 +42,12 @@ export default {
       xhttp.onload = function() {
         alert("Load:" + xhttp.readyState + " - " + xhttp.status + " [" + xhttp.responseText + "]");
       };
+      xhttp.onerror = function() {
+        alert("OnError:" + xhttp.readyState + " - " + xhttp.status + " [" + xhttp.responseText + "]");
+      };
+      xhttp.error = function() {
+        alert("Error:" + xhttp.readyState + " - " + xhttp.status + " [" + xhttp.responseText + "]");
+      };
 
       xhttp.open("POST", url, true);
       xhttp.setRequestHeader("Content-type", "application/json");

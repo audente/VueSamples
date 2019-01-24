@@ -2,13 +2,10 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <button @click="run_xHTTPRequest">XHTTPRequest</button>
-    <button @click="run_axios">Axios</button>
   </div>
 </template>
 
 <script>
-import { axios } from 'axios'
-
 
 export default {
   name: "HelloWorld",
@@ -18,37 +15,6 @@ export default {
     };
   },
   methods: {
-    run_axios: function() {
-      const url="https://ussouthcentral.services.azureml.net/workspaces/8a9e6c2473674cbda1a9047e2e1258e2/services/0729753e4be646f3b0e1e0079df19ee8/execute?api-version=2.0&details=true"
-      const auth="Bearer taYapadAQL5Ho5uaHZQI0xugDVHJTl0C3/5XahbZKPiUGYYptmfwAMQB8pGqJuIP+RwZcnR/7n30QDBJ54Vk+Q==";
-      const data = { "Inputs": { "input1": {
-        "ColumnNames": ["Indice", "Nivel", "G_conta", "NumCta", "Desc", "CodAgrup", "DescAgrup"],
-        "Values": [
-          ["1", "1", "Capital", "101", "Banco", "value1", "value2" ],
-          ["2", "2", "Capital", "102", "Caja", "", "value2" ],
-          ["3", "2", "Capital", "102", "Caja", "value1", "value2" ],
-        ]
-        }},
-        "GlobalParameters": {}
-      }
-      const json = JSON.stringify(data);
-
-      var config = {
-        headers: {
-          "Content-type": "application/json",
-          "Authorization": auth,
-        }
-      };
-
-      axios.post(url, data, config)
-        .then(function(response){
-          alert("THEN:" + response);
-        })
-        .catch(function(error){
-          alert("ERROR:" + response);
-        });
-      
-    },
     run_xHTTPRequest: function() {
       const url="https://ussouthcentral.services.azureml.net/workspaces/8a9e6c2473674cbda1a9047e2e1258e2/services/0729753e4be646f3b0e1e0079df19ee8/execute?api-version=2.0&details=true";
       const auth="Bearer taYapadAQL5Ho5uaHZQI0xugDVHJTl0C3/5XahbZKPiUGYYptmfwAMQB8pGqJuIP+RwZcnR/7n30QDBJ54Vk+Q==";
